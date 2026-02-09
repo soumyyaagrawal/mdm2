@@ -7,7 +7,7 @@ import Map from './map.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     {/* <App /> */}
-    <Map />
+    {/* <Map /> */}
     <EvenOdd num={10} />  
   </StrictMode>,
 )
