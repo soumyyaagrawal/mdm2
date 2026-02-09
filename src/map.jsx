@@ -1,9 +1,9 @@
+
+
 const Map = () => {
 
     const mobile = ["samsung", "iphone", "android"]
-    mobile.map((item, index) => {
-        console.log(item, index);
-    })
+    
     
     return( <div>
         <h1>Map Component</h1>
