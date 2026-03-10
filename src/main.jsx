@@ -4,12 +4,14 @@ import './index.css'
 import Messages from './messages.jsx'
 import App from './About.jsx'
 import Map from './map.jsx'
+import Header from './header.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     {/* <App /> */}
     {/* <Map /> */}
-    <Messages />
+    {/* <Messages />   */}
+     <Header color="red"/> 
   </StrictMode>,
 )
 
