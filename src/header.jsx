@@ -9,14 +9,15 @@ export default class Header extends Component {
   }
 
 
-static getDerivedStateFromProps(props, state) {
-    return {color:props.color}
-}
+componentDidMount(){
+    setTimeout(()=>{
+        this.setState({color:"green"})
+    },2000)}
 
 render(){
     return(
         <div>
-            <h1>Color is {this.state.color}</h1>
+            <h1>Fav Color is {this.state.color}</h1>
         </div>
     )
 }
