@@ -12,13 +12,25 @@ export default class Header extends Component {
 componentDidMount(){
     setTimeout(()=>{
         this.setState({color:"green"})
-    },2000)}
+    },3000)
+}
+
+getSnapshotBeforeUpdate = (prevProps, prevState) => {
+  document.getElementById("div1").innerHTML="Before update, the colour was "+ prevState.color;
+  return null;
+}
+
+componentDidUpdate(prevProps, prevState){
+    document.getElementById("div2").innerHTML="After update, the colour is "+ this.state.color;
+}
 
 render(){
     return(
-        <div>
-            <h1>Fav Color is {this.state.color}</h1>
-        </div>
+        <>
+            <h1>Color is {this.state.color}</h1>
+            <div id="div1"></div>
+            <div id="div2"></div>
+        </>
     )
 }
 }
